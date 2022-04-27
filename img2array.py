@@ -171,16 +171,16 @@ def write_1bpp(image_path, header):
     for y in range(start_height, height):
         for x in range(0, width):
             if i == 0:
-                val = 0 if px[x, y] < 0xF else 1
+                val = 0 if px[x, y] < 0x7 else 1
                 i += 1
             elif i == 7:
-                val += 0 << i if px[x, y] < 0xF else 1 << i
+                val += 0 << i if px[x, y] < 0x7 else 1 << i
                 header.write(str(hex(val)).encode())
                 header.write(b',')
                 num += 1
                 i = 0
             else:
-                val += 0 << i if px[x, y] < 0xF else 1 << i
+                val += 0 << i if px[x, y] < 0x7 else 1 << i
                 i += 1
     print("wrote " + str(num) + " bytes to file header")
 
