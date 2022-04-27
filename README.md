@@ -23,7 +23,7 @@ pip install Pillow
 python img2array.py TYPE IMG_WIDTH IMG_HEIGHT IMG1_FILE_PATH IMG2_FILE_PATH ...
 ```
 - `TYPE` can be `1bpp`, `2bpp`, `4bpp` or `8bpp`
-- `IMG_WIDTH` and `IMG_HEIGHT` are the width and height of the image in pixels
+- `IMG_WIDTH` and `IMG_HEIGHT` are the width and height of the output image in pixels
 - `IMGX_FILE_PATH` are the paths to the image files. Batch processing is supported.
 
 ## Author
